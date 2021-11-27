@@ -21,7 +21,7 @@ var picture_files = {
 	"new/thenub.jpg": "A cool spot, CA",
 	"new/arbel_half_dome.jpg": "Half dome!!",
 	"new/half_dome_p3.jpg": "Nerves",
-	"eclipse.jpg": "Borah Peak, ID (eclipse!, shot by a friend) ",
+	"eclipse.jpg": "Total Solar Eclipse, Borah Peak, ID - this was around 10AM. friend got the better shot so using theirs :) ",
 	"knox.JPG": "SF, CA",
 	"new_photos/sesh3_2017.jpg": "Yosemite, CA",
 	"new_photos/mtdavidson2.jpg": "Mt. Dave, SF",
