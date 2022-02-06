@@ -1,3 +1,18 @@
+var folder = "assets/images/";
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                // $("body").append( "<img src='"+ folder + val +"'>" );
+				console.log(val)
+            } 
+        });
+    }
+});
+
+
 PATH = "assets/images/"
 function buildHTML(fileName, location = "", path = PATH) {
 	return `			
@@ -92,10 +107,79 @@ var picture_files = {
 	"ggb.JPG": "SF, CA",
 	"hammock.JPG": "Russian River, CA",
 	"johnChess.JPG": "Glen Park, SF",
-
-	
 };
 
+pct_images = [
+	// Desert
+	"earlydays.jpeg",
+	"onehundo.jpeg",
+	"panodesert.jpeg",
+	"jacinto.JPG",
+	"jacinto2.jpeg",
+	"aguadulce1.jpeg",
+	"pizzasubs2.JPG",
+	"aquaduct.jpeg",
+	"biggroup.jpeg",
+	"tree.jpeg",
+
+	// Sierra
+	"quinn_pickup.JPG",
+	"sunrisewhitneydescent.jpeg",
+	"whitneygroup.jpeg",
+	"whitneydescent2.jpeg",
+	"whitneydescent3.jpeg",
+	"whitneydescent.jpeg",
+	"whitneythreeamigos.jpeg",
+	"whitney_bag.JPG",
+	"kearsarge.jpeg",
+	"raequinnfish.jpeg",
+	"raepoker.jpeg",
+	"muirpass.jpeg",
+	"river.jpeg",
+	"thepass.jpeg",
+	"thepass2.jpeg",
+	"lake.jpeg",
+	"morelake.jpeg",
+	"onek.JPG",
+	"evolution.jpeg",
+	"postmuirpass.jpeg",
+	"bestcampsite.jpeg",
+	"quinninthewind.jpeg",
+	"threeamigosyosem.jpeg",
+	"quinn.jpeg",
+	"friends.jpeg",
+	"beauty.jpeg",
+	"tahoe.jpeg",
+	"trees.jpeg",
+	"samjohn.jpeg",
+
+	// Norcal
+	"burnzone.jpeg",
+	"jenny.jpeg",
+
+	// Oregon
+
+	"oregontrail.jpeg",
+	"detroitoregon.jpeg",
+	"crater2.jpeg",
+	"crater1.jpeg",
+	"quinnthreesister.jpeg",
+	"youmatter.jpeg",
+	"youareloved.jpeg",
+	"youareenough.jpeg",
+
+	// Wash
+	"goatrocks.jpeg",
+	"jack.jpeg",
+	"samnjack.JPG",
+	"jack_hitch.jpeg",
+	"goats.jpeg",
+	"beautiful.jpeg",
+	"treesky.jpeg",
+	"quinnjack.jpeg",
+	"rainbowjack.jpeg",
+	"theend.jpeg",
+]
 
 var pictureHTML = ``
 for (var fileName in picture_files) {
@@ -104,6 +188,14 @@ for (var fileName in picture_files) {
 	}
 }
 
+
+var pctHTML = ``
+var pct_folder = "new2022/PCT/"
+pct_images.forEach(function(fileName) {
+	pctHTML += buildHTML(pct_folder+fileName, "");
+});
+
 window.onload = function () {
-	$("#pics").append(pictureHTML)
+	$("#other_photos").append(pictureHTML)
+	$("#pct_photos").append(pctHTML)
 };
