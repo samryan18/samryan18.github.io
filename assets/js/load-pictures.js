@@ -109,8 +109,7 @@ var picture_files = {
 	"johnChess.JPG": "Glen Park, SF",
 };
 
-pct_images = [
-	// Desert
+var socalPhotos = [
 	"earlydays.jpeg",
 	"onehundo.jpeg",
 	"panodesert.jpeg",
@@ -121,7 +120,9 @@ pct_images = [
 	"aquaduct.jpeg",
 	"biggroup.jpeg",
 	"tree.jpeg",
+]
 
+sierraImages = [
 	// Sierra
 	"quinn_pickup.JPG",
 	"sunrisewhitneydescent.jpeg",
@@ -152,13 +153,11 @@ pct_images = [
 	"tahoe.jpeg",
 	"trees.jpeg",
 	"samjohn.jpeg",
+]
 
-	// Norcal
+norCalOregonPhotos = [
 	"burnzone.jpeg",
 	"jenny.jpeg",
-
-	// Oregon
-
 	"oregontrail.jpeg",
 	"detroitoregon.jpeg",
 	"crater2.jpeg",
@@ -167,8 +166,9 @@ pct_images = [
 	"youmatter.jpeg",
 	"youareloved.jpeg",
 	"youareenough.jpeg",
+]
 
-	// Wash
+washingtonPhotos = [
 	"goatrocks.jpeg",
 	"jack.jpeg",
 	"samnjack.JPG",
@@ -188,14 +188,30 @@ for (var fileName in picture_files) {
 	}
 }
 
-
-var pctHTML = ``
 var pct_folder = "new2022/PCT/"
-pct_images.forEach(function(fileName) {
-	pctHTML += buildHTML(pct_folder+fileName, "");
+
+var socalHTML = ``
+var sierraHTML = ``
+var norcalOregonHTML = ``
+var washHTML = ``
+socalPhotos.forEach(function(fileName) {
+	socalHTML += buildHTML(pct_folder+fileName, "");
 });
+sierraImages.forEach(function(fileName) {
+	sierraHTML += buildHTML(pct_folder+fileName, "");
+});
+norCalOregonPhotos.forEach(function(fileName) {
+	norcalOregonHTML += buildHTML(pct_folder+fileName, "");
+});
+washingtonPhotos.forEach(function(fileName) {
+	washHTML += buildHTML(pct_folder+fileName, "");
+});
+
 
 window.onload = function () {
 	$("#other_photos").append(pictureHTML)
-	$("#pct_photos").append(pctHTML)
+	$("#socal_photos").append(socalHTML)
+	$("#sierra_photos").append(sierraHTML)
+	$("#norcal_oregon_photos").append(norcalOregonHTML)
+	$("#wash_photos").append(washHTML)
 };
