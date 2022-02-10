@@ -1,18 +1,5 @@
 var folder = "assets/images/";
 
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                // $("body").append( "<img src='"+ folder + val +"'>" );
-				console.log(val)
-            } 
-        });
-    }
-});
-
-
 PATH = "assets/images/"
 function buildHTML(fileName, location = "", path = PATH) {
 	return `			
