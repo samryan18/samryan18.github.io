@@ -96,6 +96,23 @@ var picture_files = {
 	"johnChess.JPG": "Glen Park, SF",
 };
 
+var after2021Photos = {
+	"halfdomesnow.jpeg": "winter half dome",
+	"georgialaughing.jpeg": "",
+	"fcc.jpeg": "",
+	"quinnggb.jpeg": "",
+	"maunaloaevan.jpeg": "Mauna Loa",
+	"maunaloaevanbike.jpeg": "Different day on Mauna Loa",
+	"ggb.jpeg": "",
+	"kalalau.jpeg": "most beautiful trail in the world",
+	"caldera.jpeg": "13k feet in hawaii",
+	"bike_valley.jpeg": "",
+	"lonepeak.jpeg": "Lone peak",
+	"angel_lake_nevada.jpeg": "Angel Lake, NV",
+	"superior_wasatch.jpeg": "Mt. Superior, UT",
+	"superior_ridge.jpeg": "Ridge below Superior",
+	"evans_cycling.jpeg": "Mt. Evans Summit",
+}
 var socalPhotos = [
 	"earlydays.jpeg",
 	"onehundo.jpeg",
@@ -175,6 +192,13 @@ for (var fileName in picture_files) {
 	}
 }
 
+var after2021HTML = ``
+for (var fileName in after2021Photos) {
+	if (after2021Photos.hasOwnProperty(fileName)) {
+		after2021HTML += buildHTML("new2022/2022_lib/" + fileName, after2021Photos[fileName]);
+	}
+}
+
 var pct_folder = "new2022/PCT/"
 
 var socalHTML = ``
@@ -198,6 +222,7 @@ washingtonPhotos.forEach(function(fileName) {
 
 window.onload = function () {
 	$("#other_photos").append(pictureHTML)
+	$("#post2021_photos").append(after2021HTML)
 	$("#socal_photos").append(socalHTML)
 	$("#sierra_photos").append(sierraHTML)
 	$("#norcal_oregon_photos").append(norcalOregonHTML)
