@@ -23,7 +23,7 @@ var picture_files = {
 	"new/thenub.jpg": "A cool spot, CA",
 	"new/arbel_half_dome.jpg": "Half dome!!",
 	"new/half_dome_p3.jpg": "Nerves",
-	"eclipse.jpg": "Total Solar Eclipse, Borah Peak, ID - this was around 10AM. friend got the better shot so using theirs :) ",
+	"eclipse.jpg": "Total Solar Eclipse, Borah Peak, ID - this was around 10am during late summer :)",
 	"knox.JPG": "SF, CA",
 	"new_photos/sesh3_2017.jpg": "Yosemite, CA",
 	"new_photos/mtdavidson2.jpg": "Mt. Dave, SF",
@@ -181,6 +181,7 @@ var socalHTML = ``
 var sierraHTML = ``
 var norcalOregonHTML = ``
 var washHTML = ``
+
 socalPhotos.forEach(function(fileName) {
 	socalHTML += buildHTML(pct_folder+fileName, "");
 });
