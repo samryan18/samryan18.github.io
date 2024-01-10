@@ -1,14 +1,15 @@
-var folder = "assets/images/";
+const folder = "assets/images/";
+const PATH = "assets/images/";
 
-PATH = "assets/images/"
 function buildHTML(fileName, location = "", path = PATH) {
-	return `			
-						        <span class="image main">
-									<figure><img src="` + path + fileName + `" alt="">
-								    <figcaption>` + location + `</figcaption></figure>
-								</span>`;
+	return `
+		<span class="image main">
+			<figure>
+				<img src="${path}${fileName}" alt="">
+				<figcaption>${location}</figcaption>
+			</figure>
+		</span>`;
 }
-
 var picture_files = {
 	"GlenPark.jpg": "Glen Park, SF",
 	"bus.JPG": "Walmart Parking Lot, Tennessee",
@@ -184,47 +185,37 @@ washingtonPhotos = [
 	"rainbowjack.jpeg",
 	"theend.jpeg",
 ]
+const pictureHTML = Object.entries(picture_files)
+	.map(([fileName, file]) => buildHTML(fileName, file))
+	.join("");
 
-var pictureHTML = ``
-for (var fileName in picture_files) {
-	if (picture_files.hasOwnProperty(fileName)) {
-		pictureHTML += buildHTML(fileName, picture_files[fileName]);
-	}
-}
+const after2021HTML = Object.entries(after2021Photos)
+	.map(([fileName, file]) => buildHTML("new2022/2022_lib/" + fileName, file))
+	.join("");
 
-var after2021HTML = ``
-for (var fileName in after2021Photos) {
-	if (after2021Photos.hasOwnProperty(fileName)) {
-		after2021HTML += buildHTML("new2022/2022_lib/" + fileName, after2021Photos[fileName]);
-	}
-}
+const pct_folder = "new2022/PCT/";
 
-var pct_folder = "new2022/PCT/"
+const socalHTML = socalPhotos
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
 
-var socalHTML = ``
-var sierraHTML = ``
-var norcalOregonHTML = ``
-var washHTML = ``
+const sierraHTML = sierraImages
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
 
-socalPhotos.forEach(function(fileName) {
-	socalHTML += buildHTML(pct_folder+fileName, "");
-});
-sierraImages.forEach(function(fileName) {
-	sierraHTML += buildHTML(pct_folder+fileName, "");
-});
-norCalOregonPhotos.forEach(function(fileName) {
-	norcalOregonHTML += buildHTML(pct_folder+fileName, "");
-});
-washingtonPhotos.forEach(function(fileName) {
-	washHTML += buildHTML(pct_folder+fileName, "");
-});
+const norcalOregonHTML = norCalOregonPhotos
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
 
+const washHTML = washingtonPhotos
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
 
 window.onload = function () {
-	$("#other_photos").append(pictureHTML)
-	$("#post2021_photos").append(after2021HTML)
-	$("#socal_photos").append(socalHTML)
-	$("#sierra_photos").append(sierraHTML)
-	$("#norcal_oregon_photos").append(norcalOregonHTML)
-	$("#wash_photos").append(washHTML)
+	$("#other_photos").append(pictureHTML);
+	$("#post2021_photos").append(after2021HTML);
+	$("#socal_photos").append(socalHTML);
+	$("#sierra_photos").append(sierraHTML);
+	$("#norcal_oregon_photos").append(norcalOregonHTML);
+	$("#wash_photos").append(washHTML);
 };
