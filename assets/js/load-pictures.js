@@ -1,12 +1,15 @@
-PATH = "assets/images/"
-function buildHTML(fileName, location = "", path = PATH) {
-	return `			
-						        <span class="image main">
-									<figure><img src="` + path + fileName + `" alt="">
-								    <figcaption>` + location + `</figcaption></figure>
-								</span>`;
-}
+const folder = "assets/images/";
+const PATH = "assets/images/";
 
+function buildHTML(fileName, location = "", path = PATH) {
+	return `
+		<span class="image main">
+			<figure>
+				<img src="${path}${fileName}" alt="">
+				<figcaption>${location}</figcaption>
+			</figure>
+		</span>`;
+}
 var picture_files = {
 	"GlenPark.jpg": "Glen Park, SF",
 	"bus.JPG": "Walmart Parking Lot, Tennessee",
@@ -21,7 +24,7 @@ var picture_files = {
 	"new/thenub.jpg": "A cool spot, CA",
 	"new/arbel_half_dome.jpg": "Half dome!!",
 	"new/half_dome_p3.jpg": "Nerves",
-	"eclipse.jpg": "Total Solar Eclipse, Borah Peak, ID - this was around 10AM. friend got the better shot so using theirs :) ",
+	"eclipse.jpg": "Total Solar Eclipse, Borah Peak, ID - this was around 10am during late summer :)",
 	"knox.JPG": "SF, CA",
 	"new_photos/sesh3_2017.jpg": "Yosemite, CA",
 	"new_photos/mtdavidson2.jpg": "Mt. Dave, SF",
@@ -92,18 +95,127 @@ var picture_files = {
 	"ggb.JPG": "SF, CA",
 	"hammock.JPG": "Russian River, CA",
 	"johnChess.JPG": "Glen Park, SF",
-
-	
 };
 
-
-var pictureHTML = ``
-for (var fileName in picture_files) {
-	if (picture_files.hasOwnProperty(fileName)) {
-		pictureHTML += buildHTML(fileName, picture_files[fileName]);
-	}
+var after2021Photos = {
+	"halfdomesnow.jpeg": "winter half dome",
+	"georgialaughing.jpeg": "",
+	"fcc.jpeg": "",
+	"quinnggb.jpeg": "",
+	"maunaloaevan.jpeg": "Mauna Loa",
+	"maunaloaevanbike.jpeg": "Different day on Mauna Loa",
+	"ggb.jpeg": "",
+	"kalalau.jpeg": "most beautiful trail in the world",
+	"caldera.jpeg": "13k feet in hawaii",
+	"bike_valley.jpeg": "",
+	"lonepeak.jpeg": "Lone peak",
+	"angel_lake_nevada.jpeg": "Angel Lake, NV",
+	"superior_wasatch.jpeg": "Mt. Superior, UT",
+	"superior_ridge.jpeg": "Ridge below Superior",
+	"evans_cycling.jpeg": "Mt. Evans Summit",
 }
+var socalPhotos = [
+	"earlydays.jpeg",
+	"onehundo.jpeg",
+	"panodesert.jpeg",
+	"jacinto.JPG",
+	"jacinto2.jpeg",
+	"aguadulce1.jpeg",
+	"pizzasubs2.JPG",
+	"aquaduct.jpeg",
+	"biggroup.jpeg",
+	"tree.jpeg",
+]
+
+sierraImages = [
+	// Sierra
+	"quinn_pickup.JPG",
+	"sunrisewhitneydescent.jpeg",
+	"whitneygroup.jpeg",
+	"whitneydescent2.jpeg",
+	"whitneydescent3.jpeg",
+	"whitneydescent.jpeg",
+	"whitneythreeamigos.jpeg",
+	"whitney_bag.JPG",
+	"kearsarge.jpeg",
+	"raequinnfish.jpeg",
+	"raepoker.jpeg",
+	"muirpass.jpeg",
+	"river.jpeg",
+	"thepass.jpeg",
+	"thepass2.jpeg",
+	"lake.jpeg",
+	"morelake.jpeg",
+	"onek.JPG",
+	"evolution.jpeg",
+	"postmuirpass.jpeg",
+	"bestcampsite.jpeg",
+	"quinninthewind.jpeg",
+	"threeamigosyosem.jpeg",
+	"quinn.jpeg",
+	"friends.jpeg",
+	"beauty.jpeg",
+	"tahoe.jpeg",
+	"trees.jpeg",
+	"samjohn.jpeg",
+]
+
+norCalOregonPhotos = [
+	"burnzone.jpeg",
+	"jenny.jpeg",
+	"oregontrail.jpeg",
+	"detroitoregon.jpeg",
+	"crater2.jpeg",
+	"crater1.jpeg",
+	"quinnthreesister.jpeg",
+	"youmatter.jpeg",
+	"youareloved.jpeg",
+	"youareenough.jpeg",
+]
+
+washingtonPhotos = [
+	"goatrocks.jpeg",
+	"jack.jpeg",
+	"samnjack.JPG",
+	"jack_hitch.jpeg",
+	"goats.jpeg",
+	"beautiful.jpeg",
+	"treesky.jpeg",
+	"quinnjack.jpeg",
+	"rainbowjack.jpeg",
+	"theend.jpeg",
+]
+const pictureHTML = Object.entries(picture_files)
+	.map(([fileName, file]) => buildHTML(fileName, file))
+	.join("");
+
+const after2021HTML = Object.entries(after2021Photos)
+	.map(([fileName, file]) => buildHTML("new2022/2022_lib/" + fileName, file))
+	.join("");
+
+const pct_folder = "new2022/PCT/";
+
+const socalHTML = socalPhotos
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
+
+const sierraHTML = sierraImages
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
+
+const norcalOregonHTML = norCalOregonPhotos
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
+
+const washHTML = washingtonPhotos
+	.map(fileName => buildHTML(pct_folder + fileName, ""))
+	.join("");
 
 window.onload = function () {
-	$("#pics").append(pictureHTML)
+	$("#other_photos").append(pictureHTML);
+	$("#post2021_photos").append(after2021HTML);
+	$("#socal_photos").append(socalHTML);
+	$("#sierra_photos").append(sierraHTML);
+	$("#norcal_oregon_photos").append(norcalOregonHTML);
+	$("#wash_photos").append(washHTML);
 };
