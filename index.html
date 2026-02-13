@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Samuel Ryan</title>
+    <meta name="description" content="Samuel Ryan — SF native.">
+    <meta property="og:title" content="Samuel Ryan">
+    <meta property="og:description" content="SF native.">
+    <meta property="og:image" content="assets/images/portrait.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#fafaf8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='58' font-family='Georgia,serif' font-size='36' font-weight='500' fill='%232c2c2c' text-anchor='middle' dominant-baseline='middle'>SLR</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        ::selection { background: #e8e0d4; }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            font-size: 18px;
+            line-height: 1.65;
+            color: #2c2c2c;
+            background: #fafaf8;
+            padding: 5rem 1.5rem 3rem;
+            font-variant-numeric: oldstyle-nums;
+            text-rendering: optimizeLegibility;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        main {
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            margin-bottom: 2rem;
+        }
+
+        .portrait {
+            width: 100%;
+            display: block;
+            margin-bottom: 2.5rem;
+        }
+
+        details { margin-bottom: 1.2rem; }
+
+        summary {
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: lowercase;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; float: right; font-weight: 400; }
+        details[open] > summary::after { content: '\2212'; }
+        details[open] > summary {
+            margin-bottom: 0.8rem;
+            position: sticky;
+            top: 0;
+            background: #fafaf8;
+            z-index: 2;
+        }
+
+        details details[open] > summary {
+            top: 2.2rem;
+            z-index: 1;
+        }
+
+        .content { padding: 0.2rem 0 0.8rem; font-size: 0.9rem; }
+
+        p { margin-bottom: 0.5rem; }
+
+        ul { list-style: none; }
+        li { padding: 0.15rem 0; }
+        li span { color: #888; }
+
+        a {
+            color: #555;
+            text-decoration-color: #ccc;
+            text-underline-offset: 3px;
+            transition: color 0.15s;
+        }
+
+        a:hover { color: #2c2c2c; text-decoration-color: #999; }
+
+        /* Nested sub-sections */
+        details details {
+            margin: 0.5rem 0;
+            padding-left: 1rem;
+        }
+
+        details details summary {
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            border-bottom: 1px solid #eee;
+        }
+
+        figure {
+            margin: 1.2rem 0;
+        }
+
+        figure img {
+            width: 100%;
+            display: block;
+        }
+
+        figcaption {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.35rem;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+        }
+
+        footer a { margin-right: 1.8rem; text-decoration: none; }
+        footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+        @media (max-width: 500px) {
+            body { padding: 3rem 1.25rem 2rem; font-size: 17px; }
+            h1 { font-size: 1.35rem; margin-bottom: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Samuel Ryan</h1>
+
+        <img class="portrait" src="assets/images/portrait.jpg" alt="Samuel Ryan">
+
+        <details>
+            <summary>intro</summary>
+            <div class="content">
+                <p>SF native.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>links</summary>
+            <div class="content">
+                <details>
+                    <summary>projects</summary>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://github.com/samryan18/chess-ray-vision">Chess Ray Vision</a> <span>(2019)</span></li>
+                            <li><a href="https://samryan18.github.io/sandbox-pct/">Pacific Crest Trail</a> <span>(2021)</span></li>
+                            <li><a href="https://kisotechnology.com">Kiso</a> <span>(2023)</span></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>blogroll</summary>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://thezvi.substack.com/">DWATV</a></li>
+                            <li><a href="https://marginalrevolution.com/">Marginal Revoluton</a> <span>(Tyler Cowan)</span></li>
+                            <li><a href="https://astralcodexten.substack.com/">Astral Codex Ten</a> <span>(Scott Alexander)</span></li>
+                            <li><a href="https://www.kalzumeus.com/">kalzumeus</a> <span>(Patrick McKenzie)</span></li>
+                            <li><a href="https://www.theinsight.org/">The Insight</a> <span>(Zeynep Tufekci)</span></li>
+                            <li><a href="https://austinvernon.site/blog/">Austin Vernon</a></li>
+                            <li><a href="http://www.paulgraham.com/articles.html">Paul Graham</a></li>
+                            <li><a href="https://waitbutwhy.com/">Wait But Why?</a> <span>(Tim Urban)</span></li>
+                            <li><a href="https://www.joelonsoftware.com/">JOEL ON SOFTWARE</a> <span>(Joel Spolsky)</span></li>
+                            <li><a href="https://www.destroyallsoftware.com/talks/wat">wat</a></li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details>
+            <summary>pics</summary>
+            <div class="content">
+
+                <details>
+                    <summary>life is beautiful</summary>
+                    <div class="content">
+                        <p>Some favorites from 2020 and before (shot on iphone).</p>
+                        <figure><img src="assets/images/life-is-beautiful/glen-park.jpg" alt="Glen Park, SF" loading="lazy"><figcaption>Glen Park, SF</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/bus.jpg" alt="Walmart Parking Lot, Tennessee" loading="lazy"><figcaption>Walmart Parking Lot, Tennessee</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/freeacid.jpg" alt="SF, CA" loading="lazy"><figcaption>SF, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/minarets.jpg" alt="Minarets, CA" loading="lazy"><figcaption>Minarets, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/pfeifferhorn-lake.jpg" alt="Utah" loading="lazy"><figcaption>Utah</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/winds.jpg" alt="Winds, WY" loading="lazy"><figcaption>Winds, WY</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/crystal-crag.jpg" alt="Crystal Crag, CA" loading="lazy"><figcaption>Crystal Crag, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/pfeifferhorn.jpg" alt="Pfeifferhorn, Utah" loading="lazy"><figcaption>Pfeifferhorn, Utah</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/shasta.jpg" alt="Mt. Shasta, CA" loading="lazy"><figcaption>Mt. Shasta, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/shasta-sunrise.jpg" alt="Shasta shadow sunrise" loading="lazy"><figcaption>Shasta shadow sunrise</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/thenub.jpg" alt="A cool spot, CA" loading="lazy"><figcaption>A cool spot, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/arbel-half-dome.jpg" alt="Half dome!!" loading="lazy"><figcaption>Half dome!!</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/half-dome-p3.jpg" alt="Nerves" loading="lazy"><figcaption>Nerves</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/eclipse.jpg" alt="Total Solar Eclipse, Borah Peak, ID" loading="lazy"><figcaption>Total Solar Eclipse, Borah Peak, ID - this was around 10am during late summer :)</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/knox.jpg" alt="SF, CA" loading="lazy"><figcaption>SF, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/sesh3-2017.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/mtdavidson2.jpg" alt="Mt. Dave, SF" loading="lazy"><figcaption>Mt. Dave, SF</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/matterhorn.jpg" alt="Matterhorn, CA" loading="lazy"><figcaption>Matterhorn, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/views.jpg" alt="Grand Canyon" loading="lazy"><figcaption>Grand Canyon</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/corneta-menu.jpg" alt="Old La Corneta Menu, SF" loading="lazy"><figcaption>Old La Corneta Menu, SF</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/lyell-arbel.jpg" alt="Mt. Lyell, CA" loading="lazy"><figcaption>Mt. Lyell, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/shasta-evan.jpg" alt="Mt. Lyell, CA" loading="lazy"><figcaption>Mt. Lyell, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/bow-lake.jpg" alt="Bow Lake, Canada" loading="lazy"><figcaption>Bow Lake, Canada</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/strawberry-mansion.jpg" alt="Strawberry Mansion Bridge, Philly" loading="lazy"><figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/strawberry-mansion3.jpg" alt="Strawberry Mansion Bridge, Philly" loading="lazy"><figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/strawberry-mansion2.jpg" alt="Strawberry Mansion Bridge, Philly" loading="lazy"><figcaption>Strawberry Mansion Bridge, Philly</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/campsite.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/girls-ip.png" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/yosem-hd.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/moraine-lake.jpg" alt="Moraine Lake, Canada" loading="lazy"><figcaption>Moraine Lake, Canada</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/utah-town.png" alt="Utah" loading="lazy"><figcaption>Utah</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/my-room.jpg" alt="SF, CA" loading="lazy"><figcaption>SF, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/may-lake.jpg" alt="May Lake, CA" loading="lazy"><figcaption>May Lake, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/may3.jpg" alt="May Lake, CA" loading="lazy"><figcaption>May Lake, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/yellowstone.jpg" alt="Yellowstone, WY" loading="lazy"><figcaption>Yellowstone, WY</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/amoudi.jpg" alt="Amoudi Bay, Greece" loading="lazy"><figcaption>Amoudi Bay, Greece</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/half-dome.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/sutro.jpg" alt="SF, CA" loading="lazy"><figcaption>SF, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/campsite2.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/may2.jpg" alt="May Lake, CA" loading="lazy"><figcaption>May Lake, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/el-cap.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/half-dome-dark.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/alien-plant.jpg" alt="Grand Canyon" loading="lazy"><figcaption>Grand Canyon</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/max-tahoe.jpg" alt="Tahoe" loading="lazy"><figcaption>Tahoe</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/half-dome2.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/waterfall-rainbow.png" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/athens.jpg" alt="Athens, Greece" loading="lazy"><figcaption>Athens, Greece</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/beach.jpg" alt="Sani, Greece" loading="lazy"><figcaption>Sani, Greece</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/mt-dave.jpg" alt="Mt. Dave, SF" loading="lazy"><figcaption>Mt. Dave, SF</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/all-green.jpg" alt="Yosemite, CA" loading="lazy"><figcaption>Yosemite, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/tree.jpg" alt="Poopenaut Valley, CA" loading="lazy"><figcaption>Poopenaut Valley, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/dude.jpg" alt="SF, CA" loading="lazy"><figcaption>SF, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/surrey.jpg" alt="Geep." loading="lazy"><figcaption>Geep.</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/sprang-brake.jpg" alt="GW Natl. Forest, VA" loading="lazy"><figcaption>GW Natl. Forest, VA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/peace-valley2.jpg" alt="Peace Valley, PA" loading="lazy"><figcaption>Peace Valley, PA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/falls-bridge.jpg" alt="Falls Bridge, Philly" loading="lazy"><figcaption>Falls Bridge, Philly</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/tenaya.jpg" alt="Tenaya Canyon, CA" loading="lazy"><figcaption>Tenaya Canyon, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/smile.jpg" alt="Fairmount Park, Philly" loading="lazy"><figcaption>Fairmount Park, Philly</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/ryan-women.jpg" alt="Outside Chicago, IL" loading="lazy"><figcaption>Outside Chicago, IL</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/santorini.jpg" alt="Santorini, Greece" loading="lazy"><figcaption>Santorini, Greece</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/edinburgh.jpg" alt="Edinburgh, Scotland" loading="lazy"><figcaption>Edinburgh, Scotland</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/the-road.jpg" alt="Clingman's Dome, TN" loading="lazy"><figcaption>Clingman's Dome, TN</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/morning.jpg" alt="Clingman's Dome, TN" loading="lazy"><figcaption>Clingman's Dome, TN</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/cathedral-lakes.jpg" alt="Cathedral Lake, CA" loading="lazy"><figcaption>Cathedral Lake, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/washington2019.jpg" alt="Washington DC in 2019" loading="lazy"><figcaption>Washington DC in 2019</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/gaylorlakes.jpg" alt="Gaylor Lakes, CA" loading="lazy"><figcaption>Gaylor Lakes, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/herons-head.jpg" alt="Heron's Head, SF" loading="lazy"><figcaption>Heron's Head, SF</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/ti-mf.jpg" alt="Oakland" loading="lazy"><figcaption>Oakland</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/sauni.jpg" alt="Sani, Greece" loading="lazy"><figcaption>Sani, Greece</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/mayab7.jpg" alt="Camp Tawonga, CA" loading="lazy"><figcaption>Camp Tawonga, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/peytolake.jpg" alt="Peyto Lake, Canada" loading="lazy"><figcaption>Peyto Lake, Canada</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/mammoth-hot-springs.jpg" alt="Mammoth Hot Springs, CA" loading="lazy"><figcaption>Mammoth Hot Springs, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/philly-in-may.jpg" alt="Philly in May" loading="lazy"><figcaption>Philly in May</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/smoke-coming-in.jpg" alt="Smoke Coming In" loading="lazy"><figcaption>Smoke Coming In</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/nevada-falls.jpg" alt="Nevada Falls, CA" loading="lazy"><figcaption>Nevada Falls, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/mtdavidson.jpg" alt="Mt. Dave, SF" loading="lazy"><figcaption>Mt. Dave, SF</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/ggb.jpg" alt="SF, CA" loading="lazy"><figcaption>SF, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/hammock.jpg" alt="Russian River, CA" loading="lazy"><figcaption>Russian River, CA</figcaption></figure>
+                        <figure><img src="assets/images/life-is-beautiful/john-chess.jpg" alt="Glen Park, SF" loading="lazy"><figcaption>Glen Park, SF</figcaption></figure>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>life is still beautiful</summary>
+                    <div class="content">
+                        <p>Some favorites from 2021 and later (shot on iphone).</p>
+                        <figure><img src="assets/images/life-is-still-beautiful/halfdomesnow.jpg" alt="winter half dome" loading="lazy"><figcaption>winter half dome</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/georgialaughing.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/fcc.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/quinnggb.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/maunaloaevan.jpg" alt="Mauna Loa" loading="lazy"><figcaption>Mauna Loa</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/maunaloaevanbike.jpg" alt="Different day on Mauna Loa" loading="lazy"><figcaption>Different day on Mauna Loa</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/ggb.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/kalalau.jpg" alt="most beautiful trail in the world" loading="lazy"><figcaption>most beautiful trail in the world</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/caldera.jpg" alt="13k feet in hawaii" loading="lazy"><figcaption>13k feet in hawaii</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/bike-valley.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/lonepeak.jpg" alt="Lone peak" loading="lazy"><figcaption>Lone peak</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/angel-lake-nevada.jpg" alt="Angel Lake, NV" loading="lazy"><figcaption>Angel Lake, NV</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/superior-wasatch.jpg" alt="Mt. Superior, UT" loading="lazy"><figcaption>Mt. Superior, UT</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/superior-ridge.jpg" alt="Ridge below Superior" loading="lazy"><figcaption>Ridge below Superior</figcaption></figure>
+                        <figure><img src="assets/images/life-is-still-beautiful/evans-cycling.jpg" alt="Mt. Evans Summit" loading="lazy"><figcaption>Mt. Evans Summit</figcaption></figure>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>pct 2021: socal</summary>
+                    <div class="content">
+                        <figure><img src="assets/images/pct-socal/earlydays.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/onehundo.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/panodesert.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/jacinto.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/jacinto2.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/aguadulce1.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/pizzasubs2.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/aquaduct.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/biggroup.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-socal/tree.jpg" alt="" loading="lazy"></figure>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>pct 2021: sierras</summary>
+                    <div class="content">
+                        <figure><img src="assets/images/pct-sierras/quinn-pickup.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/sunrisewhitneydescent.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/whitneygroup.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/whitneydescent2.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/whitneydescent3.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/whitneydescent.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/whitneythreeamigos.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/whitney-bag.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/kearsarge.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/raequinnfish.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/raepoker.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/muirpass.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/river.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/thepass.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/thepass2.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/lake.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/morelake.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/onek.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/evolution.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/postmuirpass.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/bestcampsite.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/quinninthewind.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/threeamigosyosem.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/quinn.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/friends.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/beauty.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/tahoe.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/trees.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-sierras/samjohn.jpg" alt="" loading="lazy"></figure>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>pct 2021: norcal & oregon</summary>
+                    <div class="content">
+                        <figure><img src="assets/images/pct-norcal-oregon/burnzone.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/jenny.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/oregontrail.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/detroitoregon.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/crater2.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/crater1.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/quinnthreesister.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/youmatter.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/youareloved.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-norcal-oregon/youareenough.jpg" alt="" loading="lazy"></figure>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>pct 2021: washington</summary>
+                    <div class="content">
+                        <figure><img src="assets/images/pct-washington/goatrocks.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/jack.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/samnjack.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/jack-hitch.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/goats.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/beautiful.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/treesky.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/quinnjack.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/rainbowjack.jpg" alt="" loading="lazy"></figure>
+                        <figure><img src="assets/images/pct-washington/theend.jpg" alt="" loading="lazy"></figure>
+                    </div>
+                </details>
+
+            </div>
+        </details>
+
+        <footer>
+            <a href="https://twitter.com/samryan18">twitter</a>
+            <a href="https://github.com/samryan18">github</a>
+            <a href="https://strava.com/athletes/25222495">strava</a>
+            <a href="https://linkedin.com/in/samryan18">linkedin</a>
+        </footer>
+    </main>
+    <script>
+        document.querySelectorAll('details').forEach(d => {
+            d.addEventListener('toggle', () => {
+                if (!d.open) d.querySelectorAll('details[open]').forEach(c => c.open = false);
+            });
+        });
+    </script>
+</body>
+</html>
