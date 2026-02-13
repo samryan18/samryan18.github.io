@@ -135,6 +135,30 @@
         footer a { margin-right: 1.8rem; text-decoration: none; }
         footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
+        @keyframes enter {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1, .portrait, main > details, footer {
+            opacity: 0;
+            animation: enter 0.4s ease-out forwards;
+        }
+
+        h1 { animation-delay: 0.05s; }
+        .portrait { animation-delay: 0.15s; }
+        main > details:nth-of-type(1) { animation-delay: 0.3s; }
+        main > details:nth-of-type(2) { animation-delay: 0.4s; }
+        main > details:nth-of-type(3) { animation-delay: 0.5s; }
+        footer { animation-delay: 0.6s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            h1, .portrait, main > details, footer {
+                opacity: 1;
+                animation: none;
+            }
+        }
+
         @media (max-width: 500px) {
             body { padding: 3rem 1.25rem 2rem; font-size: 17px; }
             h1 { font-size: 1.35rem; margin-bottom: 1.5rem; }
